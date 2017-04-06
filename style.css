@@ -1,0 +1,118 @@
+@font-face {
+  font-family: PressStart;
+  src: url("font.ttf");
+}
+
+.background {
+  position: relative;
+  width: 352px;
+  height: 178px;
+
+  background: url("img/bg.png") no-repeat 0 0;
+
+  background-size: contain;
+  padding-top: 20px;
+
+  overflow: hidden;
+}
+
+.start-game {
+  display: none;
+  width: 100px;
+  height: 20px;
+  margin: 0 auto;
+  background-color: crimson;
+  color: black;
+  font-family: PressStart, serif;
+  font-size: 10px;
+
+  line-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+
+  cursor: pointer;
+
+
+}
+
+.message {
+  position: absolute;
+
+  margin-left: 20px;
+  height: 20px;
+
+  text-align: center;
+
+  font-family: PressStart, serif;
+  font-size: 10px;
+}
+
+.blood {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 178px;
+  background-color: rgba(255,0,0,0.5);
+
+  top: 0;
+  left: 0;
+}
+
+
+.sprite {
+  width: 34px;
+  height: 64px;
+  background: url("img/gunman.png") no-repeat 0 0;
+
+  position: absolute;
+  bottom: 55px;
+  left: 350px;
+
+
+
+
+  /*animation-name: ;
+*/
+  animation-duration: 0.5s;
+  animation-timing-function: steps(3);
+
+  animation-iteration-count: infinite;
+
+
+}
+
+@keyframes walk {
+  from  { background-position-x: 0; }
+  to  { background-position-x: -102px; }
+}
+@keyframes stand {
+  0%
+  {
+    background-position-x: -102px
+  }
+  100%
+  {
+    background-position-x: -102px;
+  }
+
+}
+@keyframes fire {
+  from
+  {
+    background-position-x: -136px;
+  }
+  to
+  {
+    background-position-x: -272px;
+  }
+}
+@keyframes die {
+  from
+  {
+    background-position-x: -272px;
+  }
+  to
+  {
+    background-position-x: -374px;
+  }
+}
